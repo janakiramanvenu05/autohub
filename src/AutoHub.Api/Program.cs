@@ -1,5 +1,7 @@
 using AutoHub.Application.Interfaces;
 using AutoHub.Application.Services;
+using AutoHub.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +10,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers();
+var connectionString = builder.Configuration.GetConnectionString("AutoHubDb")
+    ?? throw new InvalidOperationException("Connection string 'AutoHubDb' was not found.");
+builder.Services.AddDbContext<VehicleDbContext>(options =>
+    options.UseSqlServer(connectionString));
 builder.Services.AddScoped<IVehicleService, VehicleService>();
 
 var app = builder.Build();
