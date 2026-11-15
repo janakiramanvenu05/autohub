@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/AutoHub.Api/AutoHub.Api.csproj" />
+    <Project Path="src/AutoHub.Application/AutoHub.Application.csproj" />
+    <Project Path="src/AutoHub.Domain/AutoHub.Domain.csproj" />
+    <Project Path="src/AutoHub.Infrastructure/AutoHub.Infrastructure.csproj" />
+  </Folder>
+</Solution>
