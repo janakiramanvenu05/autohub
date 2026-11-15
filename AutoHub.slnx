@@ -5,4 +5,7 @@
     <Project Path="src/AutoHub.Domain/AutoHub.Domain.csproj" />
     <Project Path="src/AutoHub.Infrastructure/AutoHub.Infrastructure.csproj" />
   </Folder>
+  <Folder Name="/src/.github/">
+    <File Path="copilot-instructions.md" />
+  </Folder>
 </Solution>
